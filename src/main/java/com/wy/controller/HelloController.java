@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.*;
 public class HelloController {
 
 
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public String hello() {
         return "Hello Spring Boot!";
     }
+
+
     @RequestMapping(value = "/say2/{id}",method = RequestMethod.GET)
     public  String say2(@PathVariable("id") Integer id){
         return "id:" + id;
